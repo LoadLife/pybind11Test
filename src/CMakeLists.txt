@@ -1,0 +1,3 @@
+add_subdirectory(dynamic_load)
+pybind11_add_module(bindtest bindtest.cc)
+target_link_libraries(bindtest PRIVATE pet_store)
