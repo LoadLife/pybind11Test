@@ -3,15 +3,18 @@
 class Pet;
 
 typedef Pet *(*GetCat_handle)();
+typedef void *(*DelCat_handle)(Pet *);
 
 class PetStore {
 public:
   PetStore();
-  Pet* GetCat();  
+  Pet *GetCat();
+  void DelCat(Pet *pet);
   ~PetStore();
 
 private:
   GetCat_handle GetCat_ptr_;
+  DelCat_handle Delcat_ptr_;
   void *pet_lib_{nullptr};
 };
 

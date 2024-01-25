@@ -7,3 +7,5 @@ extern "C" Pet *GetCat() {
   Cat *cat = new Cat();
   return cat;
 }
+
+extern "C" void DelCat(Pet *cat) { delete cat; }

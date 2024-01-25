@@ -8,5 +8,6 @@ PYBIND11_MODULE(bindtest, m) {
 
   py::class_<PetStore>(m, "PetStore")
       .def(py::init<>())
-      .def("GetCat", &PetStore::GetCat);
+      .def("GetCat", &PetStore::GetCat, py::return_value_policy::reference)
+      .def("DelCat", &PetStore::DelCat);
 }
