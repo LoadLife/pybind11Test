@@ -1,5 +1,12 @@
 from bindtest import *
 
+
+def test_dynamic_load():
+    ps = PetStore()
+    cat = ps.GetCat()
+    cat.Eat()
+
+
 def test_def_property():
     c_arr = CArray()
     print(c_arr.arr)
