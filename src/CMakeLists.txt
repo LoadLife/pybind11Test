@@ -6,3 +6,5 @@ pybind11_add_module(bindtest ${SRC})
 target_link_libraries(bindtest PRIVATE pet_store)
 target_include_directories(bindtest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 configure_file(test_bindtest.py ${CMAKE_BINARY_DIR}/src)
+
+add_subdirectory(embed)
